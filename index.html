@@ -60,8 +60,8 @@
           </select>
         </div>
         <ul>
-          <li><a href="">Sign In</a></li>
-          <li><a href="#" target="_blank" class="sign-up">Sign Up</a></li>
+          <li><a href="/signin.html">Sign In</a></li>
+          <li><a href="/signin.html"class="sign-up" onclick="signup()">Sign Up</a></li>
         </ul>
       </section>
       <main>
@@ -97,8 +97,20 @@
             <p class="p1">Car Type</p>
             <div class="car-type-picker">
               <img src="assets/images/Car.svg" alt="Car" />
-              <span class="car-type-text">City Car</span>
-              <img src="assets/images/More.svg" alt="More" />
+              <ul class="car-ul">
+                <li><a href="#">Car <i class="fa fa-angle-down"></i></a>
+                <div class="car-menu">
+                  <ul>
+                    <li><a href="#">Economy <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">Business <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">First Class <i class="fa fa-angle-right"></i></a></li>
+                  </ul>
+                </div>
+                
+                </li>
+              </ul>
+              <!-- <span class="car-type-text">City Car</span> -->
+              <!-- <img src="assets/images/More.svg" alt="More" /> -->
             </div>
           </div>
           <div>
@@ -141,5 +153,6 @@
       <img src="assets/images/Strons.svg" alt="strons" />
       <img src="assets/images/Cocoon.svg" alt="Cocoon" />
     </footer>
+    <script src="signin.js"></script>
   </body>
 </html>

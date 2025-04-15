@@ -234,6 +234,49 @@ input{
     border-right: 1px solid #909090;
 padding: 0 20px;
 }
+.car-ul{
+    padding: 0;
+}
+.car-ul li a:hover{
+color: #F5993C;
+}
+.car-ul li a{
+text-decoration: none;
+color: #313131;
+}
+.car-menu{
+    display: none;
+    padding: 20px;
+}
+.car-menu ul{
+    padding: 0;
+}
+.fa{
+    margin-left: 10px;
+}
+.car-ul li:hover .car-menu{
+    display: block;
+    position: absolute;
+    background-color: #F2F1F0 ;
+    margin-top: 2px;
+    margin-left: -35px;
+}
+.car-ul li:hover .car-menu ul{
+    display: block;
+    margin: 0px;
+}
+.car-ul li:hover .car-menu ul li{
+    /* width: 100px; */
+    padding: 10px;
+    border-bottom: 1px dotted #313131;
+    text-align: left;
+}
+.car-ul li:hover .car-menu ul li:last-child{
+    border-bottom: none;
+}
+.car-ul li:hover .car-menu ul li a:hover{
+    color: #f1522b;
+}
 .car-type-picker, .date-picker{
     display: flex;
     gap: 15px;
