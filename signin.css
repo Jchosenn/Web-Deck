@@ -5,10 +5,21 @@ body{
 .hero{
     height: 100%;
     width: 100%;
-    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(assets/images/QuantumAI.svg);
-    background-position: center;
-    background-size: cover;
     position: absolute;
+    overflow: hidden;
+}
+.hero:before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(assets/images/Burnt\ Orange\ car.png);
+    background-position: center;
+    background-size: 110%;
+    filter: blur(5px);
+    z-index: -1;
 }
 .form-box{
     width: 380px;
@@ -18,6 +29,7 @@ body{
     padding: 5px;
     background: #FFFF;
     overflow: hidden;
+    border-radius: 30px;
 }
 .button-box{
     width: 220px;
@@ -35,6 +47,13 @@ body{
     border: 0;
     outline: none;
     position: relative;
+}
+.toggle-btn:hover{
+    background: transparent;
+    color: #909090;
+}
+.toggle-btn:active{
+    transform: scale(0.95);
 }
 #btn{
     top: 0;
@@ -57,6 +76,13 @@ body{
     box-shadow: 0 0 70px 0 #7f7f7f3d;
     cursor: pointer;
     border-radius: 50%;
+}
+.social-icons i:hover{
+    color: #313131;
+    box-shadow: 0 0 70px 0 #F5993C;
+}
+.social-icons i:active{
+    transform: scale(0.9);
 }
 .input-group{
     top: 180px;
@@ -85,10 +111,16 @@ body{
     margin: auto;
     background: linear-gradient(to right, #F7943C, #F78512);
     border: 0;
-    outline: none;
+    outline: none; 
     font-family: "Poppins", sans-serif;
     font-size: 12px;
     border-radius: 30px;
+}
+.submit-btn:hover{
+    background: linear-gradient(to right, #F78512, #F7943C);
+}
+.submit-btn:active{
+    transform: scale(0.95);
 }
 .check-box{
     margin: 30px 10px 30px 0;
