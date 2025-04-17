@@ -3,20 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
       </style>
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
     />
+    <!-- Font Icons -->
     <script src="https://kit.fontawesome.com/1424886bf8.js" crossorigin="anonymous"></script>
+    <!-- Css links -->
+    <link rel="stylesheet" href="signin.css">
     <link rel="stylesheet" href="style.css" />
     <title>Car Detail || Page</title>
   </head>
   <body>
+    <!-- Sign In/Sign Up -->
+    <div class="hero">
+      <div class="form-box">
+          <div class="button-box">
+              <div id="btn"></div>
+              <button type="button" class="toggle-btn" onclick="signin()">Sign In</button>
+              <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+          </div>
+          <div class="social-icons">
+              <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> 
+             <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+             <a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a> 
+             <a href="https://www.LinkedIn.com/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+              
+          </div>
+          <form id="sign-in" class="input-group">
+              <input type="text" class="input-field" placeholder="User Id" required>
+              <input type="password" class="input-field" placeholder="Enter Password" required>
+              <input type="checkbox" class="check-box"><span>Remember Password</span>
+              <button type="submit" class="submit-btn">Sign In</button>
+          </form>
+          <form id="sign-up" class="input-group">
+              <input type="text" class="input-field" placeholder="User Id" required>
+              <input type="email" class="input-field" placeholder="Email Id" required>
+              <input type="password" class="input-field" placeholder="Enter Password" required>
+              <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+              <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <button class="close-btn" onclick="closeBtn()">&times</button>
+      </div>
+     </div> 
+     <!-- Home page -->
     <div class="web-holder">
       <header>
         <div class="contact">
@@ -29,30 +65,30 @@
             <p>support@homie.com</p>
           </div>
         </div>
-        <ul>
+        <ul class="social-handles">
           <li>
             <a href="https://www.instagram.com/" target="_blank"
-              ><i class="fab fa-instagram" style="color: #313131;"></i></a>
+              ><i class="fab fa-instagram"></i></a>
           </li>
           <li>
             <a href="https://www.facebook.com/" target="_blank"
-              ><i class="fab fa-facebook-f" style="color: #313131;"></i></a>
+              ><i class="fab fa-facebook-f"></i></a>
           </li>
-          <li><a href="https://x.com/home" target="_blank"><i class="fab fa-twitter" style="color: #313131;"></i></a></li>
+          <li><a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a></li>
           <li>
             <a href="https://www.LinkedIn.com/" target="_blank"
-              ><i class="fab fa-linkedin" style="color: #313131;"></i></a>
+              ><i class="fab fa-linkedin"></i></a>
           </li>
         </ul>
       </header>
       <section>
-        <img src="assets/images/QuantumAI.svg" alt="QuantumAI" />
+        <a href="index.html" class="logo"><img src="assets/images/LuxeDrive.svg" alt="LuxeDrive" /></a>
         <div class="info">
-          <a href="#" target="_blank">Home</a>
+          <a href="#">Home</a>
           <a href="services.html">Services</a>
-          <a href="#" target="_blank">Car Catalogue</a>
-          <a href="#" target="_blank">FAQ</a>
-          <a href="#" target="_blank">About</a>
+          <a href="#">Car Catalogue</a>
+          <a href="#">FAQ</a>
+          <a href="#">About</a>
           <select name="services">
             <option value="">More</option>
             <option value="1">Car Rent</option>
@@ -60,8 +96,8 @@
           </select>
         </div>
         <ul>
-          <li><a href="/signin.html">Sign In</a></li>
-          <li><a href="/signin.html"class="sign-up" onclick="signup()">Sign Up</a></li>
+           <button onclick="toggleSignin()" class="signin">Sign In</button>
+           <button onclick="toggleSignup()" class="sign-up">Sign Up</button>
         </ul>
       </section>
       <main>
@@ -90,7 +126,6 @@
             <div class="location-picker">
               <img src="assets/images/Location.svg" alt="Location" />
               <input type="search" placeholder="Choose Location">
-              <!-- <span class="location-text">Choose Location</span> -->
             </div>
           </div>
           <div class="car-type">
@@ -109,8 +144,6 @@
                 
                 </li>
               </ul>
-              <!-- <span class="car-type-text">City Car</span> -->
-              <!-- <img src="assets/images/More.svg" alt="More" /> -->
             </div>
           </div>
           <div>
@@ -119,11 +152,9 @@
               <img
                 src="assets/images/Calendar.svg"
                 alt="Calendar Icon"
-                class="calendar-icon"
+                class="calendar-icon1"
               />
               <input type="date">
-              <!-- <span class="formatted-date">17 July 2024</span> -->
-              <!-- <img src="assets/images/More.svg" alt="More" /> -->
             </div>
           </div>
           <div>
@@ -132,15 +163,13 @@
               <img
                 src="assets/images/Calendar.svg"
                 alt="Calendar Icon"
-                class="calendar-icon"
+                class="calendar-icon2"
               />
               <input type="date">
-              <!-- <span class="formatted-date">17 July 2024</span> -->
-              <!-- <img src="assets/images/More.svg" alt="more" /> -->
             </div>
           </div>
-          <div class="button">
-            <button>Search</button>
+          <div class="button-holder">
+            <button class="button">Search</button>
           </div>
         </div>
       </main>

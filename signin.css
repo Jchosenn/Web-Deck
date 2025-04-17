@@ -1,12 +1,35 @@
 body{
     margin: 0;
+    /* filter: blur(5px); */
     padding: 0;
+    /* height: 100vh; */
 }
+
 .hero{
     height: 100%;
     width: 100%;
     position: absolute;
+    top: 0;
+    opacity: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     overflow: hidden;
+    z-index: 1;
+    /* transform: translate(-50%, -50%) scale(1.25); */
+    /* transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms; */
+    display: none;
+}
+.popup{
+    opacity: 1;
+    display: block;
+    /* z-index: 20; */
+    /* transform: translate(50%, 50%) scale(1); */
+    /* transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms; */
 }
 .hero:before{
     content: '';
@@ -15,21 +38,50 @@ body{
     left: -10px;
     width: calc(100% + 20px);
     height: calc(100% + 20px);
-    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(assets/images/Burnt\ Orange\ car.png);
+    /* background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(assets/images/Burnt\ Orange\ car.png); */
     background-position: center;
     background-size: 110%;
-    filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
+
 .form-box{
     width: 380px;
     height: 480px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 35%;
     margin: 6% auto;
     padding: 5px;
+    z-index: 20;
     background: #FFFF;
     overflow: hidden;
     border-radius: 30px;
+}
+   .close-btn{
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: transparent;
+    color: #313131;
+    border: none;
+    /* border-radius: 50%; */
+    top: 42px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 1.5px;
+   } 
+   .close-btn:hover{
+    background-color: transparent;
+    color: #313131;
+}
+.close-btn:active{
+    background-color: transparent;
+    transform: scale(0.95);
+    color: #313131;
 }
 .button-box{
     width: 220px;
@@ -43,6 +95,7 @@ body{
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     cursor: pointer;
+    color: #313131;
     background: transparent;
     border: 0;
     outline: none;
@@ -50,7 +103,7 @@ body{
 }
 .toggle-btn:hover{
     background: transparent;
-    color: #909090;
+    color: #616060;
 }
 .toggle-btn:active{
     transform: scale(0.95);
@@ -66,23 +119,52 @@ body{
     transition: .2s;
 }
 .social-icons{
+    display: flex;
+    justify-content: center;
     margin: 30px auto;
     text-align: center;
 }
+.social-icons a{
+    text-decoration: none;
+}
 .social-icons i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
+    height: 30px;
     color: #F5993C;
+    position: relative;
+    aspect-ratio: 1;
     margin: 0 12px;
+    background-color: #FFFF;
     box-shadow: 0 0 70px 0 #7f7f7f3d;
     cursor: pointer;
     border-radius: 50%;
 }
+@property --fill{
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
 .social-icons i:hover{
-    color: #313131;
+    color: #F78512;
+    --fill:100%;
     box-shadow: 0 0 70px 0 #F5993C;
+}
+.social-icons i::after{
+position: absolute;
+z-index: -1;
+content: '';
+inset: -3px;
+border-radius: inherit;
+background: conic-gradient(#F5993C var(--fill), transparent var(--fill));
+transition: --fill 0.6s ease-in-out;
 }
 .social-icons i:active{
     transform: scale(0.9);
+    color: transparent;
+    background: none;
 }
 .input-group{
     top: 180px;
