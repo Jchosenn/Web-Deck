@@ -13,16 +13,116 @@
             <!-- Css links -->
         <link rel="stylesheet" href="services.css">
         <link rel="stylesheet" href="style.css">
-        <!-- Font Icons -->
+        <link rel="stylesheet" href="signin.css">
+        <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/1424886bf8.js" crossorigin="anonymous"></script>
     <title>Services</title>
 </head>
 <body>
-    <h1>Services</h1>
+    <!-- <h1>Services</h1>
     <ul>
         <li><a href="" class="toggle-btn" onclick="signin()">Sign In</a></li>
         <li><a href="index.html" class="sign-up">Home</a></li>
-      </ul>
+      </ul> -->
+      <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="signin()">Sign In</button>
+                <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> 
+               <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+               <a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a> 
+               <a href="https://www.LinkedIn.com/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+                
+            </div>
+            <form id="sign-in" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+            <form id="sign-up" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                 <!-- <a href="services.html" class="submit-btn">Sign Up</a> -->
+              </form>
+              <button class="close-btn" onclick="closeBtn()">&times</button>
+        </div>
+       </div> 
+      <div class="web-holder web2">
+        <header>
+          <div class="contact">
+            <div class="email">
+              <div><img src="assets/images/Vector.svg" alt="Phone-vector" /></div>
+              <p>+12 345 6789 0</p>
+            </div>
+            <div class="email">
+              <div><img src="assets/images/Email.svg" alt="Email" /></div>
+              <p>support@homie.com</p>
+            </div>
+          </div>
+          <ul class="social-handles">
+            <li>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li><a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li>
+              <a href="https://www.LinkedIn.com/" target="_blank"
+                ><i class="fab fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </header>
+        <section>
+          <a href="index.html" class="logo services-logo"><img src="assets/images/LuxeDrive.svg" alt="LuxeDrive" /></a>
+          <div class="info">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="#">Car Catalogue</a>
+            <a href="#">FAQ</a>
+            <a href="#">About</a>
+            <select name="services">
+              <option value="">More</option>
+              <option value="1">Car Rent</option>
+              <option value="2">Car Sale</option>
+            </select>
+          </div>
+          <ul>
+             <button onclick="toggleSignin()" class="signin">Sign In</button>
+             <button onclick="toggleSignup()" class="sign-up">Sign Up</button>
+          </ul>
+        </section>
+        <div class="first-main">
+            <div class="car-detail">
+              <h1 ><strong class="h1text">Premium</strong>  Vehicles</h1>
+              <h1>For Every <strong class="h1text">Terrain</strong></h1>
+              <p id="car-rent">
+                City streets to rugged mountains, our quality vehicles conquer any adventure.
+              </p>
+              <div class="learn-about">
+                <a href="#" target="_blank" id="learn-more">Browse Vehicles</a>
+                <a href="#" target="_blank" class="contact-us"><i class="fa fa-phone"></i> Contact Us</a>
+              </div>
+            </div>
+            <div class="car-image services-car">
+              <img src="assets/images/porshe-right.jpg" alt="car-image" />
+            </div>
+          </div>
+          <div class="service-section">
+            <h2>Specialized Terrain Vehicles & Services</h2>
+            <p id="info">Discover our range of quality-guaranteed vehicles specifically <br>designed for every terrain challenge and adventure</p>
+          </div>
+        </div>
    <script src="signin.js"></script>
 </body>
 </html>

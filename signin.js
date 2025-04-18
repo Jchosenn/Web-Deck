@@ -2,7 +2,8 @@ let siginElement = document.querySelector("#sign-in");
 let signupElement = document.querySelector("#sign-up");
 let btnElement = document.querySelector("#btn");
 let heroElement = document.querySelector(".hero");
-let webElement = document.querySelector(".web-holder")
+let webElement = document.querySelector(".web-holder");
+let servicesElement = document.querySelector("#services");
 function signup(){
     siginElement.style.left = "-400px";
     signupElement.style.left = "50px";
@@ -29,3 +30,8 @@ function closeBtn(){
     heroElement.classList.remove("popup");
     webElement.style.filter = "blur(0px)";
 }
+// function services(){
+//     signup();
+//     heroElement.classList.add("popup");
+//     webElement.style.filter = "blur(10px)";
+// }

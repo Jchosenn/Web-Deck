@@ -1,4 +1,55 @@
+*{
+    box-sizing: border-box;
+}
 body{
-  margin: 0;
-  padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.services-logo{
+  margin-right: 20px;
+}
+.h1text{
+  color: #F5993C;
+  font-weight: 900;
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+  /* margin: 0; */
+  font-style: normal;
+}
+.services-car{
+  width: 580px;
+}
+.services-car img{
+  width: 100%;
+  border-radius: 40px;
+}
+.contact-us{
+  color: #F5993C;
+  text-decoration: none;
+}
+.contact-us:hover{
+  color: #313131;
+  background-color:#F5993C;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+.contact-us:active{
+  color: #F5993C;
+}
+.service-section{
+  padding: 20px 50px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-section h2{
+  font-size: 32px;
+}
+#info{
+  text-align: center;
 }
